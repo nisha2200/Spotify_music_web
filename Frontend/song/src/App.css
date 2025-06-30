@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Circular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  background: #121212;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  margin-bottom: 90px;
+  overflow-y: auto;
+  background: #121212;
+  scrollbar-width: thin;
+  scrollbar-color: #535353 transparent;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 6px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #727272;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-bottom: 120px;
+  }
+}
