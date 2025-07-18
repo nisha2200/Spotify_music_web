@@ -66,7 +66,16 @@ setSearchQuery(query)
                     <p>Type something to search for songs or artists</p>
                 )}
             </div>
+            {
+                // Now Playing component
+                <NowPlaying
+                currentSong={currentSong}
+                isPlaying = {isPlaying}
+                togglePlayPause={()=> dispatch(togglePlayPause())}
+                />
+                
+                // <Navigation/>
+            }
         </div>
-    )
-
-}
+    )}
+export default Search
